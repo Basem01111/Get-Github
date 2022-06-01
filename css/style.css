@@ -1,0 +1,196 @@
+/* Start Var */
+:root {
+    --main-color: #bd2c00;
+    --two-color: #c9510c;
+}
+/* End Var */
+/* Global rols */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+/* Global rols */
+/* Start Components */
+.row-gap {
+    row-gap: 24px;
+}
+.main-btn {
+    background-color: var(--main-color);
+    padding: 0.5rem 3rem;
+    color: white;
+}
+.main-btn:hover {
+    color: white;
+}
+.main-input {
+    padding: 15px;
+    border: none;
+    box-shadow: 0 0 5px 0 #999;
+    border-radius: 4px;
+    outline: none;
+    border-bottom: 1px solid var(--main-color);
+}
+/* End Components */
+/* Start  */
+/* Start Section Level One */
+section.level-one {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+section.level-one .box-text {
+    margin-bottom: 5rem;
+    animation-duration: 1s;
+    animation-name: show-left;
+    animation-fill-mode: both;
+    transform: translateX(-150%);
+}
+section.level-one .box-text h1 {
+    margin-bottom: 1rem;
+    color: #888;
+}
+section.level-one .box-text p {
+    margin-bottom: 0;
+    color: #444;
+    font-size: 17px;
+}
+section.level-one .form-search .error {
+    color: red;
+}
+/* End Section Level One */
+
+/* Start Section Two */
+section.level-two nav {
+    padding: 10px 0;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../imgs/nav.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    background-position: center;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+section.level-two nav .container {
+    display: flex;
+    gap: 1rem;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+section.level-two nav .info .name {
+    font-size: 17px;
+}
+
+section.level-two nav .url {
+    color: #bd2c00;
+    background-color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+section.level-two nav::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #bd2c00d7;
+}
+section.level-two nav .info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+section.level-two nav .info img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+section.level-two .box {
+    padding: 10px;
+    padding-top: 20px;
+    box-shadow: 0 0 4px 0 #888;
+    border-radius: 4px;
+    transition: 300ms;
+    word-break: break-all;
+    position: relative;
+}
+section.level-two .box:hover {
+    box-shadow: 0 0 10px 0 #888;
+}
+section.level-two .box .i-git {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    background-color: white;
+    transition: 300ms;
+    font-size: 35px;
+}
+section.level-two .box:hover .i-git {
+    color: #bd2c00;
+}
+section.level-two .box .name > span {
+    color: #bd2c00;
+}
+section.level-two .box .url {
+    color: #bd2c00;
+    margin-top: 10px;
+    background-color: white;
+    font-size: 13px;
+    display: flex;
+    width: fit-content;
+    box-shadow: #777 0 0 3px;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+section.level-two .box .i-bg {
+    font-size: 100px;
+    position: absolute;
+
+    top: 50%;
+    opacity: 0.1;
+
+    transform: translateY(-50%);
+    left: 0;
+}
+/* End Section Two */
+/*keyframes */
+@keyframes show-left {
+    from {
+        transform: translateX(-150%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
